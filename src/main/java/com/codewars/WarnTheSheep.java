@@ -45,6 +45,26 @@ public class WarnTheSheep {
         }
     }
 
+    public static String warnTheSheepAttempt2(String[] array) {
+        // always going to be a wolf in the list
+        // the order of the animals is reversed
+        // return "oi!" if the wolf is at the front
+        // identify the wolf position
+        // identify the sheep position as the wolf position -1
+        // return a message with the sheep position
+
+        // reverse the array by:
+        // transform the array into a list
+        // using the Collections class to reverse the list
+        Collections.reverse(Arrays.asList(array));
+        // wolf index is the sheep position if it is not one
+        int wolfIndex = Arrays.asList(array).indexOf("wolf");
+        // return oi of wolfIndex = 0, else sheep position
+        return wolfIndex == 0 ? "Pls go away and stop eating my sheep" : "Oi! Sheep number " + wolfIndex + "! You are about to be eaten by a wolf!";
+    }
+
+
+
     public static String warnTheSheepArrayList(String[] array) {
         Collections.reverse(Arrays.asList(array));
         int pos = Arrays.asList(array).indexOf("wolf");
